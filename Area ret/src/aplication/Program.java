@@ -3,6 +3,8 @@ package aplication;
 import java.util.Locale;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 import entidade.Calculation;
 
 public class Program {
@@ -11,6 +13,9 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner tc = new Scanner(System.in);
 		Calculation calculation = new Calculation();
+		
+		
+		//JOptionPane.showMessageDialog(null, “alerta”, “alerta”, JOptionPane.ERROR_MESSAGE);
 		
 		System.out.println("Digite a area X do retangulo");
 		calculation.direito = tc.nextInt();
