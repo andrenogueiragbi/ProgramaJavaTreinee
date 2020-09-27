@@ -1,0 +1,25 @@
+package caneta;
+
+import java.util.Locale;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		
+		TipoCaneta caneta1 = new TipoCaneta();
+		TipoCaneta caneta2 = new TipoCaneta();
+		
+		System.out.println("COR");
+		
+		System.out.println("PONTA");
+		
+		System.out.println("PREÇO");
+		
+		System.out.println("PREÇO");
+		
+		
+
+	}
+
+}

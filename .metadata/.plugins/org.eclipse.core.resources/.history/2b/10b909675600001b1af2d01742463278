@@ -1,0 +1,20 @@
+package entidade;
+
+public class Mercadoria {
+	public String nome;
+	public double preco;
+	public int quantidade;
+	
+	public double totalValorEmEstoque() {
+		return quantidade;
+	}
+	public void adicionarMercadoria(int quantidade) {
+		this.quantidade = this.quantidade+quantidade;
+	}
+	public void removerMercadoria(int quantidade) {
+		this.quantidade = this.quantidade - quantidade;
+	}
+	
+	
+
+}

@@ -1,0 +1,26 @@
+package entidade;
+
+public class Mercadoria {
+	public String nome;
+	public double preco;
+	public int quantidade;
+	
+	public double totalValorEmEstoque() {
+		return quantidade*preco;
+	}
+	public void adicionarMercadoria(int quantidade) {
+		this.quantidade = this.quantidade+quantidade;
+	}
+	public void removerMercadoria(int quantidade) {
+		this.quantidade = this.quantidade - quantidade;
+	}
+	public String Tostring() {
+		return nome+
+				", R$ "+String.format("%.2f",preco)+
+				" ,"+quantidade+" unidades"+
+				", total: R$ "+String.format("%.2f", totalValorEmEstoque());
+	}
+	
+	
+
+}

@@ -1,0 +1,54 @@
+package programa;
+
+import java.util.Locale;
+import java.util.Scanner;
+import entidades.Result;
+import entidades.Triangolos;
+
+public class Tringulomain {
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner teclado = new Scanner(System.in);
+		
+		Triangolos x = new Triangolos();
+		Triangolos y = new Triangolos();
+		Result px = new Result();
+		Result py = new Result();
+	
+		System.out.println("Entre os valores do triangulo X");
+		x._1 = teclado.nextDouble();
+		x._2 = teclado.nextDouble();
+		x._3 = teclado.nextDouble();
+		System.out.println("Entre com os valore do tringulo Y");
+		y._1 = teclado.nextDouble();
+		y._2 = teclado.nextDouble();
+		y._3 = teclado.nextDouble();
+		
+		px.p = x.SomaDiv_2();
+		py.p = y.SomaDiv_2();
+		
+		//px.p= (x._1+x._2+x._3)/2;
+		//py.p = (y._1+y._2+y._3)/2;
+		
+		double areaX = Math.sqrt(px.p *(px.p-x._1)*(px.p-x._2)*(px.p-x._3));
+		double areaY = Math.sqrt(py.p *(py.p-y._1)*(py.p-y._2)*(py.p-y._3));
+		
+		System.out.printf("%.4f%n",areaX);
+		System.out.printf("%.4f%n",areaY);
+		
+		if(areaX == areaY) {
+			System.out.println("deu impate");
+	    }else if(areaX>areaY) {
+			System.out.println("X é maior");
+		}else {
+			System.out.println("Y é maior");
+		}
+		
+		
+		
+		
+		
+		teclado.close();
+	}
+
+}

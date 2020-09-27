@@ -1,0 +1,22 @@
+package caneta;
+
+import java.util.Locale;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+				
+		TipoCaneta caneta1 new TipoCaneta();
+		TipoCaneta caneta2 = dsfd
+		
+		System.out.println(QUAL );
+		
+		
+		
+		
+		
+
+	}
+
+}

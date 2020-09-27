@@ -1,0 +1,50 @@
+package aplicação;
+
+import java.util.Locale;
+import java.util.Scanner;
+import entidade.Mercadoria;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner tc = new Scanner(System.in);
+		Mercadoria merc = new Mercadoria();
+				
+		System.out.println("SEJA BEM VINDO");
+		System.out.println("ENTRE COM OS VALORES");
+		System.out.print("Nome: ");
+		merc.nome = tc.next();
+		System.out.print("Preço: ");
+		merc.preco = tc.nextDouble();
+		System.out.print("Quantidade: ");
+		merc.quantidade = tc.nextInt();
+		
+		System.out.println(merc);
+		
+		while(true) {
+		
+			int add_rm = 0;
+			int qtdade = 0;
+			System.out.println("DIGITE 1 PARA REMOVER OU 2 PARA ADICIONAR"
+					           + " DA MERCADORIA:" + merc.nome);
+			add_rm = tc.nextInt();
+			
+			if(add_rm == 1) {
+				System.out.println("QUANTO VC QUE REMOVER?");
+				qtdade = tc.nextInt();
+				merc.removerMercadoria(qtdade);
+				
+			}else if(add_rm == 2) {
+				System.out.println("QUANTO VC QUE ADICIONAR?");
+				qtdade = tc.nextInt();
+				merc.adicionarMercadoria(qtdade);
+				
+			}else {
+				System.err.println("ERRO, VC DIGITOU ALGO ERRADO");
+			}				
+			System.out.println(merc);
+		}	
+	}
+
+}

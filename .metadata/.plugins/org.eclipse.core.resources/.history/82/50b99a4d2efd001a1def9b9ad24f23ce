@@ -1,0 +1,7 @@
+package entidades;
+
+public class Triangolos {
+	public double _1;
+	public double _2;
+	public double _3;
+}

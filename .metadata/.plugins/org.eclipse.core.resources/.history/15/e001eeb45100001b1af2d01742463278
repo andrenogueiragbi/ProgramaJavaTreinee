@@ -1,0 +1,26 @@
+package aplicação;
+
+import java.util.Scanner;
+
+import entidade.Mercadoria;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		Scanner tc = new Scanner(System.in);
+		Mercadoria merc = new Mercadoria();
+				
+		System.out.println(" SEJA BEM VINDO");
+		System.out.println(" ENTRE COM OS VALORES");
+		System.out.print("Nome: ");
+		merc.nome = tc.next();
+		System.out.print("Preço: ");
+		merc.preco = tc.nextDouble();
+		System.out.println("Quantidade: ");
+		merc.quantidade = tc.nextInt();
+		
+		System.out.println(merc.nome+", "+merc.preco+", "+merc.quantidade);
+		
+	}
+
+}
